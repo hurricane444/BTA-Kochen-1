@@ -1,45 +1,172 @@
-*{box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
-
-body{
-  background-color: rgb(255,255,255);
+body {
+  background-color: rgb(255, 255, 255);
   margin: 0;
-font-family: Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
-
-a{
-color:black;
-text-decoration: none;
-text-transform: uppercase;
-font-weight: bold
+/* nur a´s die in Navigation sind  */
+nav a {
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: all 3s linear;
 }
 
-ul{
+ul {
   list-style: none;
   margin: 0;
   padding: 0
 }
 
 #header {
-
-height: 60px;
-width: 100%;
-background: white;
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding-left: 1rem;
-padding-right: 1rem;
-
+  height: 60px;
+  width: 100%;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
-
-#burger{
+#burger {
   background: transparent;
   border: none;
 }
 
-#main-navigation{
+#main-navigation {
   display: none;
+}
+
+/* Freitag Nachmittag */
+
+#hero{
+  background-image: url(img/intro.jpg);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#hero p{
+
+}
+
+#hero h1{
+  font-size: 2rem;
+}
+
+.button{
+  color: #374a67;
+  background: #fff;
+  text-decoration: none;
+  border: 2px #374a67 solid;
+  padding: 1rem;
+  text-transform: uppercase;
+  border-radius: 4px;
+  transition: all .4s ease;
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+.button:hover{
+  color: #fff;
+  background: #374a67;
+  k
+
+}
+
+/* Freitag Nachmittag Ende */
+
+
+
+.card{
+  text-align: center;
+  border: 1px solid #828282;
+  box-shadow: 0px 4px 6px 0px rgba(0,0,0,1);
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 1rem;
+
+
+
+
+
+}
+
+.card img{
+  width: 100%
+
+}
+
+.card a{
+  text-decoration: none;
+  color: #000;
+}
+
+.card p a{
+  color: #828282;
+}
+
+
+
+.card .button{
+  background: #374a67;
+  color: #fff;
+}
+
+.card .button:hover{
+  background: #fff;
+  color: #374a67;
+  border-color: #347a67;
+}
+
+
+
+
+
+@media (min-width: 960px) {
+  #main-navigation {
+    display: block
+  }
+
+  #burger {
+    display: none;
+  }
+
+  #ul {
+    display: flex;
+  }
+
+
+nav li {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+/* first child, last child */
+nav li:last-child {
+  margin-right: 0;
+}
+
+/* navigation a__Der Link wird orange!  */
+nav a:hover{
+color: orange;
+background: yellow;
+
+}
+
+.row{
+  display:flex;
+
 }
